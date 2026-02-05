@@ -11,7 +11,7 @@ if (! function_exists('updatesettingmedia')) {
     {
         if ($image = $request->file($name)) {
             $bucket = "destination-marker"; // static bucket name
-            $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.com"; // static base URL
+            $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.comphpp"; // static base URL
 
             $imageName = time() . '-' . rand(0, 99) . '-' . $image->getClientOriginalName();
 
@@ -74,7 +74,7 @@ if (! function_exists('fileUpload')) {
         try {
             if ($request->hasFile($name)) {
                 $bucket = "destination-marker"; // static bucket name
-                $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.com";
+                $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.comphpp";
 
                 // Determine folder path
                 $folderPath = $folder ? trim($folder, '/') : ''; // if folder is passed, use it; else root
@@ -128,7 +128,7 @@ if (! function_exists('removeFile')) {
     {
         try {
             $bucket = "destination-marker"; // same static bucket name
-            $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.com";
+            $baseUrl = "https://paradises3.sgp1.digitaloceanspaces.comphpp";
 
             // Remove base URL + bucket from the full file URL to get the relative path
             $prefix = rtrim($baseUrl, '/') . '/' . trim($bucket, '/');

@@ -29,7 +29,7 @@ class FrontendController extends Controller
         $about_us = Page::where('status', 1)->where('slug', 'about-us')->first();
         $why_choose_us = WhyChooseUs::where('status', 1)->oldest('order')->get();
         $why_us = Page::where('status', 1)->where('slug', 'why-choose-us')->first();
-        $testimonials = Testimonial::where('status', 1)->limit(3)->oldest("order")->get();
+        $testimonials = Testimonial::where('status', 1)->limit(9)->oldest("order")->get();
 
         $teams = Team::where('status', 1)->oldest("order")->get();
 
@@ -82,6 +82,13 @@ class FrontendController extends Controller
 
         return view('frontend.service.index', compact('service_page', 'services'));
     }
+    public function testimonial()
+    {
+        $testimonial_page = Page::where('status', 1)->where('slug', 'testimonial')->first();
+        $testimonials = Testimonial::where('status', 1)->oldest("order")->get();
+
+        return view('frontend.testimonial.index', compact('testimonial_page', 'testimonials'));
+    }
     public function singleservice($slug)
     {
         $service_page = Page::where('status', 1)->where('slug', $slug)->first();
@@ -125,7 +132,7 @@ class FrontendController extends Controller
     function blog()
     {
         $blog_page = Page::where('status', 1)->where('slug', 'blog')->first();
-        $blog = Blog::where('status', 1)->limit(3)->oldest("order")->get();
+        $blog = Blog::where('status', 1)->limit(10)->oldest("order")->get();
         return view('frontend.blog.index', compact('blog', 'blog_page'));
     }
     function blogsingle($slug)
@@ -149,7 +156,7 @@ class FrontendController extends Controller
     function team()
     {
         $team_page = Page::where('status', 1)->where('slug', 'our-team')->first();
-        $teams = Team::where('status', 1)->latest('order')->limit(3)->get() ?? [];
+        $teams = Team::where('status', 1)->latest('order')->limit(10)->get() ?? [];
         return view('frontend.team', compact('teams', 'team_page'));
     }
     function visagrantes()

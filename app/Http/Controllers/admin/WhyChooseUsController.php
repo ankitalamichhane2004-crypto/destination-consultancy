@@ -44,7 +44,7 @@ class WhyChooseUsController extends Controller
 
         foreach ($imagelist as $image) {
             if ($request->$image != '') {
-                $rules[$image] = 'image';
+                $rules[$image] = 'mimes:jpg,jpeg,png,gif,svg';
             }
         }
 
@@ -102,7 +102,7 @@ class WhyChooseUsController extends Controller
 
         foreach ($imagelist as $image) {
             if ($request->$image != '') {
-                $rules[$image] = 'image';
+                $rules[$image] = 'mimes:jpg,jpeg,png,gif,svg';
             }
         }
 
