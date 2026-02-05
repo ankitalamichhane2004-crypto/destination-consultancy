@@ -6,13 +6,13 @@
                 document.write(new Date().getFullYear());
             </script>
             ,
-            <a href="{{ route('admin.dashboard') }}">{{ $settings['site_title'] ?? 'Celta' }}</a>
+            <a href="{{ route('admin.dashboard') }}">{{ $settings['site_title'] ?? 'Destination Marker' }}</a>
         </div>
 
         <div class="mb-2 mb-md-0">
             <p>
                 Powered by
-                <a href="https://amazinginfosys.com.np/" target="_blank">Amazing Infosys </a>
+                <a href="https://paradiseit.com.np/" target="_blank">Paradise Info Tech </a>
             </p>
         </div>
 

@@ -11,71 +11,146 @@
 @endsection
 @extends('layouts.frontend.master')
 @section('content')
-    <!----page header----->
-    @if ($team_page)   
-    <div class="breadcumb-area d-flex" style="
-    background: url('{{ asset($team_page->banner_image ?? '') }}');">
-      <div class="container">
-          <div class="row align-items-center">
-              <div class="col-lg-12 text-center">
-                  <div class="breadcumb-content">
-                      <div class="breadcumb-title">
-                          <h4>{{ $team_page->title ?? 'About Us' }}</h4>
-                      </div>
-                      <ul>
-                          <li><a href="{{ route('frontend.home') }}"><i class="bi bi-house-door-fill"></i> Home </a></li>
-                          <li class="rotates"><i class="bi bi-slash-lg"></i>{{ $team_page->title ?? 'About Us' }}</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-    @endif
-    <!----page header----->
-    <!---blog--->
-    <section class="team_area style_two">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- section title -->
-                    <div class="section_title style_three style_four text-center">
-                        <h4>MEET THE TEAM</h4>
-                        <h1>We’ve {{ $teams->count() }}+ Dedicated Members</h1>
+ <div class="page-hero-area _relative about-banner" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 m-auto text-center">
+                <div class="page-hero-hadding">
+                    <h1>Our Team </h1>
+                    <div class="space16"></div>
+                    <div class="page-hero-p">
+                        <a href="{{ route('frontend.home') }}">Home</a>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                        <p>Teams</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+    <!--=====team start=======-->
+    @php
+        $team1 = $teams->get(0);
+        $team2 = $teams->get(1);
+        $team3 = $teams->get(2);
+        $team4 = $teams->get(3);
+    @endphp
+    <div class="team4 sp3"  style="background-color: #FFF8F6;">
+        <div class="container">
+            <div class="space60"></div>
             <div class="row">
-                @foreach ($teams as $team)
+                @if ($team1)
                     <div class="col-lg-3 col-md-6">
-                        <div class="single-team_item style_two">
-                            <div class="team_thumb">
-                                <img src="{{ asset($team->image) }}" alt="{{ $team->name }}">
-                                
-                               
+                        <div class="space30"></div>
+                        <div class="team4-box text-center" data-aos="fade-up" data-aos-duration="700">
+                            <div class="team4-img-box">
+                                <div class="team4-img img50 img100">
+                                    <img src="{{ asset($team1->image) }}" alt="">
+                                </div>
+                                {{-- <ul class="team4-icons team4-icons9">
+                                    <li class="team4-icon1"><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                    </li>
+                                    <li class="team4-icon2"><a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                    <li class="team4-icon3"><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="team4-icon4"><a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                </ul> --}}
                             </div>
-                            <div class="team-content">
-                                <h3><a href="#">{{ $team->name }}</a></h3>
-                                <span>{{ $team->position }}</span>
-                            </div>
-                            <div class="team_box_shape">
-                                <img src="{{ asset('frontend/assets/images/main-home/team-dot.png') }}" alt="">
+                            <div class="hadding9">
+                                <h4><a href="#" class="font-f-3">{{ $team1->name }}</a></h4>
+                                <div class="space8"></div>
+                                <p class="font-f-3">{{ $team1->position }}</p>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endif
+                @if ($team2)
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="team4-box text-center" data-aos="fade-up" data-aos-duration="900">
+                            <div class="team4-img-box">
+                                <div class="team4-img img50 img100">
+                                    <img src="{{ asset($team2->image) }}" alt="">
+                                </div>
+                                {{-- <ul class="team4-icons team4-icons9">
+                                    <li class="team4-icon1"><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                    </li>
+                                    <li class="team4-icon2"><a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                    <li class="team4-icon3"><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="team4-icon4"><a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                </ul> --}}
+                            </div>
+                            <div class="hadding9">
+                                <h4><a href="#" class="font-f-3">{{ $team2->name }}</a></h4>
+                                <div class="space8"></div>
+                                <p class="font-f-3">{{ $team2->position }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+                @if ($team3)
+                    <div class="col-lg-3 col-md-6">
+                        <div class="space30"></div>
+                        <div class="team4-box text-center" data-aos="fade-up" data-aos-duration="700">
+                            <div class="team4-img-box">
+                                <div class="team4-img img50 img100">
+                                    <img src="{{ asset($team3->image) }}" alt="">
+                                </div>
+                                {{-- <ul class="team4-icons team4-icons9">
+                                    <li class="team4-icon1"><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                    </li>
+                                    <li class="team4-icon2"><a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                    <li class="team4-icon3"><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="team4-icon4"><a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                </ul> --}}
+                            </div>
+                            <div class="hadding9">
+                                <h4><a href="#" class="font-f-3">{{ $team3->name }}</a></h4>
+                                <div class="space8"></div>
+                                <p class="font-f-3">{{ $team3->position }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+                @if ($team4)
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team4-box text-center" data-aos="fade-up" data-aos-duration="900">
+                            <div class="team4-img-box">
+                                <div class="team4-img img50 img100">
+                                    <img src="{{ asset($team4->image) }}" alt="">
+                                </div>
+                                {{-- <ul class="team4-icons team4-icons9">
+                                    <li class="team4-icon1"><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                    </li>
+                                    <li class="team4-icon2"><a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                    <li class="team4-icon3"><a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="team4-icon4"><a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    </li>
+                                </ul> --}}
+                            </div>
+                            <div class="hadding9">
+                                <h4><a href="#" class="font-f-3">{{ $team4->name }}</a></h4>
+                                <div class="space8"></div>
+                                <p class="font-f-3">{{ $team4->position }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
-        <div class="team_all_shape">
-            <div class="shape_one">
-                <img src="{{ asset('assets/images/main-home/team_rotate.png') }}" alt="">
-            </div>
-            <div class="shape_two">
-                <img src="{{ asset('assets/images/main-home/tir.png') }}" alt="">
-            </div>
-            <div class="shape_three">
-                <img src="{{ asset('assets/images/main-home/about_shape_3.png') }}" alt="">
-            </div>
-        </div>
-    </section>
+    </div>
+
+    <!--=====team end=======-->
+
 @endsection

@@ -21,6 +21,8 @@
                   <div class="page-hero-p">
                       <a href="{{ route('frontend.home') }}">Home</a>
                       <span><i class="fa-solid fa-angle-right"></i></span>
+                      <a href="{{ route('frontend.course') }}">Course</a>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
                       <p>{{ $coursesingle->title ?? '' }}</p>
                   </div>
               </div>
@@ -30,7 +32,7 @@
 </div>
     <!--=====pages hero end=======-->
     <!--=====service details start=======-->
-    <div class="service-details-all sp3">
+    <div class="service-details-all sp3" style="background-color: #FFF8F6;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 m-auto">
@@ -57,7 +59,7 @@
     </div>
     <!--=====service details end=======-->
     <!--=====countries start=======-->
-    <div class="countries sp4">
+    <div class="countries sp4" style="background-color: #FFF8F6;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 m-auto text-center">
@@ -72,9 +74,9 @@
                 @foreach($courses as $course)
                 <div class="col-lg-6 col-md-6">
                     <div class="mb-4 position-relative" data-aos="fade-up" data-aos-duration="700">
-            
+
                         <a href="{{ route('frontend.coursesingle', $course->slug) }}" class="stretch-link"></a>
-            
+
                         <div class="explore-box explore-box9">
                             <div class="explore-box-hadding hadding1">
                                 <h3>
@@ -88,12 +90,12 @@
                                 </p>
                             </div>
                         </div>
-            
+
                     </div>
                 </div>
             @endforeach
-            
-    
+
+
             </div>
         </div>
     </div>

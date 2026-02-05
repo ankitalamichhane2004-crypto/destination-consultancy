@@ -12,7 +12,7 @@
 @extends('layouts.frontend.master')
 @section('content')
       <!--=====pages hero start=======-->
-      <div class="page-hero-area _relative about-banner" >
+      <div class="page-hero-area _relative about-banner"  >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 m-auto text-center">
@@ -34,7 +34,7 @@
         <img class="page-hero-element4 aniamtion-key-2" src="assets/img/shapes/page-header-element2.svg" alt="">
       </div>
       <!--=====pages hero end=======-->
-      <div class="countrie3 sp3 _relative">
+      <div class="countrie3 sp3 _relative"  style="background-color: #FFF8F6;">
         <div class="container">
             <div class="row">
                 @foreach($abroadstudies as $country)

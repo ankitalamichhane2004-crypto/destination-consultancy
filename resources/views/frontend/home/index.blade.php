@@ -1,15 +1,12 @@
 @extends('layouts.frontend.master')
 @section('content')
     <div class="paginacontainer">
-
         <div class="progress-wrap">
             <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
             </svg>
         </div>
-
     </div>
-
     <!--=====hero area start=======-->
     <div class="hero-area2 _relative"
         style="background-image: url({{ asset('frontend/assets/img/bg/header9-bg.png') }}); min-height: 800px; background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; align-items: center;">
@@ -62,11 +59,8 @@
         <img class="hero9-shape4 aniamtion-key-2" src="{{ asset('frontend/assets/img/shapes/hero9-shape5.svg') }}"
             alt="">
     </div>
-
     <!--=====hero area end=======-->
-
     <!--=====about start=======-->
-
     <div class="about9 sp3" style="background-color: #FFF8F6;">
         <div class="container">
             <div class="row">
@@ -106,11 +100,8 @@
             </div>
         </div>
     </div>
-
     <!--=====about end=======-->
-
     <!--=====service start=======-->
-
     <div class="service9 sp3">
         <div class="container">
             <div class="row">
@@ -130,17 +121,17 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service9-box text-center position-relative" data-aos="fade-up" data-aos-duration="700">
                             <div class="service9-img img5 img100">
-                                <img src="{{ asset($item->image) }}" alt="">
+                                <img src="{{ asset($item->image) }}" alt="" height="380px">
                             </div>
                             <div class="serivce9-icon text-center">
-                                <h4><a href="{{ route('frontend.service', $item->slug) }}"><img
+                                <h4><a href="{{ route('frontend.singleservice', $item->slug) }}"><img
                                             src="assets/img/icons/service9-icon1.svg" alt="">
                                         <span>{{ $item->title }}</span> </a></h4>
                             </div>
                             <div class="space16"></div>
-                            <a href="{{ route('frontend.service', $item->slug) }}" class=" stretched-link"></a>
-
-                            <a href="{{ route('frontend.service', $item->slug) }}" class="learn-more9 font-f-3">Read more
+                            <a href="{{ route('frontend.singleservice', $item->slug) }}" class=" stretched-link"></a>
+                            <a href="{{ route('frontend.singleservice', $item->slug) }}" class="learn-more9 font-f-3">Read
+                                more
                                 <span><i class="fa-solid fa-arrow-right"></i></span></a>
                         </div>
                     </div>
@@ -157,7 +148,6 @@
         </div>
     </div>
     <!--=====service end=======-->
-
     <!--=====choose start=======-->
     @php
         $whyus1 = $why_choose_us->get(0);
@@ -187,7 +177,7 @@
                         <div class="" data-aos="fade-right" data-aos-duration="700">
                             <div class="choose2-box3 choose2-left">
                                 <div class="choose2-text-box3 choose2-text-box9">
-                                    <h4><a href="service-details.html" class="font-f-4">{{ $whyus1->title }}</a></h4>
+                                    <h4><a href="#" class="font-f-4">{{ $whyus1->title }}</a></h4>
                                     <div class="space12"></div>
                                     <div class="font-f-4">{!! $whyus1->description !!} </div>
                                 </div>
@@ -201,7 +191,7 @@
                         <div class="" data-aos="fade-right" data-aos-duration="900">
                             <div class="choose2-box3 choose2-right">
                                 <div class="choose2-text-box3 choose2-text-box9">
-                                    <h4><a href="service-details.html" class="font-f-4">{{ $whyus2->title }}</a></h4>
+                                    <h4><a href="#" class="font-f-4">{{ $whyus2->title }}</a></h4>
                                     <div class="space12"></div>
                                     <div class="font-f-3">{!! $whyus2->description !!} </div>
                                 </div>
@@ -215,7 +205,7 @@
                         <div class="" data-aos="fade-right" data-aos-duration="1100">
                             <div class="choose2-box3 choose2-left">
                                 <div class="choose2-text-box3 choose2-text-box9">
-                                    <h4><a href="service-details.html" class="font-f-3">{{ $whyus3->title }}</a></h4>
+                                    <h4><a href="#" class="font-f-3">{{ $whyus3->title }}</a></h4>
                                     <div class="space12"></div>
                                     <div class="font-f-3">{!! $whyus3->description !!}</div>
                                 </div>
@@ -238,7 +228,7 @@
                         <div class="" data-aos="fade-left" data-aos-duration="700">
                             <div class="choose2-box4 choose2-box9 choose2-right">
                                 <div class="choose2-text-box4 choose2-text-box9">
-                                    <h4><a href="service-details.html" class="font-f-3">{{ $whyus4->title }}</a></h4>
+                                    <h4><a href="#" class="font-f-3">{{ $whyus4->title }}</a></h4>
                                     <div class="space12"></div>
                                     <div class="font-f-3">{!! $whyus4->description !!} </div>
                                 </div>
@@ -252,7 +242,7 @@
                         <div class="" data-aos="fade-left" data-aos-duration="700">
                             <div class="choose2-box4 choose2-box9 choose2-left">
                                 <div class="choose2-text-box4 choose2-text-box9">
-                                    <h4><a href="service-details.html" class="font-f-3">{{ $whyus5->title }}</a></h4>
+                                    <h4><a href="#" class="font-f-3">{{ $whyus5->title }}</a></h4>
                                     <div class="space12"></div>
                                     <div class="font-f-3">{!! $whyus5->description !!}</div>
                                 </div>
@@ -266,7 +256,7 @@
                         <div class="" data-aos="fade-left" data-aos-duration="700">
                             <div class="choose2-box4 choose2-box9 choose2-right">
                                 <div class="choose2-text-box4 choose2-text-box9">
-                                    <h4><a href="service-details.html" class="font-f-3">{{ $whyus6->title }}</a></h4>
+                                    <h4><a href="#" class="font-f-3">{{ $whyus6->title }}</a></h4>
                                     <div class="space12"></div>
                                     <div class="font-f-3">{!! $whyus6->description !!}</div>
                                 </div>
@@ -328,8 +318,8 @@
                     @endforeach
                 </div>
                 <div class="col-lg-6 col-md-6">
+                    <div class="space30"></div>
                     @foreach ($rightCourses as $item)
-                        <div class="space30"></div>
                         <div class="" data-aos="fade-up" data-aos-duration="700">
                             <div class="explore-box explore-box9">
                                 {{-- <span class="font-f-2">Step 02</span> --}}
@@ -381,10 +371,9 @@
                 @foreach ($countries as $item)
                     <div class="col-lg-4 col-md-6">
                         <div class="countries8-box text-center" data-aos="fade-up" data-aos-duration="1000">
-                              <a href="{{ route('frontend.abroadsingle', $item->slug) }}"
-                                    class="stretched-link"></a>
+                            <a href="{{ route('frontend.abroadsingle', $item->slug) }}" class="stretched-link"></a>
                             <div class="countries8-box-img img100">
-                                <img src="{{ asset($item->image) }}" alt="">
+                                <img src="{{ asset($item->image) }}" style="height:450px; object-fit: cover" alt="">
                             </div>
                             <div class="hadding8-w countries8-box-hadding countries9-box-hadding">
                                 <h4><a href="{{ route('frontend.abroadsingle', $item->slug) }}"
@@ -458,8 +447,7 @@
                                 </ul> --}}
                             </div>
                             <div class="hadding9">
-                                <h4><a href="{{ route('frontend.about', $team1->slug) }}"
-                                        class="font-f-3">{{ $team1->name }}</a></h4>
+                                <h4><a href="#" class="font-f-3">{{ $team1->name }}</a></h4>
                                 <div class="space8"></div>
                                 <p class="font-f-3">{{ $team1->position }}</p>
                             </div>
@@ -486,8 +474,7 @@
                                 </ul> --}}
                             </div>
                             <div class="hadding9">
-                                <h4><a href="{{ route('frontend.about', $team1->slug) }}"
-                                        class="font-f-3">{{ $team2->name }}</a></h4>
+                                <h4><a href="#" class="font-f-3">{{ $team2->name }}</a></h4>
                                 <div class="space8"></div>
                                 <p class="font-f-3">{{ $team2->position }}</p>
                             </div>
@@ -514,8 +501,7 @@
                                 </ul> --}}
                             </div>
                             <div class="hadding9">
-                                <h4><a href="{{ route('frontend.about', $team1->slug) }}"
-                                        class="font-f-3">{{ $team3->name }}</a></h4>
+                                <h4><a href="#" class="font-f-3">{{ $team3->name }}</a></h4>
                                 <div class="space8"></div>
                                 <p class="font-f-3">{{ $team3->position }}</p>
                             </div>
@@ -541,8 +527,7 @@
                                 </ul> --}}
                             </div>
                             <div class="hadding9">
-                                <h4><a href="{{ route('frontend.about', $team1->slug) }}"
-                                        class="font-f-3">{{ $team4->name }}</a></h4>
+                                <h4><a href="#" class="font-f-3">{{ $team4->name }}</a></h4>
                                 <div class="space8"></div>
                                 <p class="font-f-3">{{ $team4->position }}</p>
                             </div>
@@ -552,11 +537,8 @@
             </div>
         </div>
     </div>
-
     <!--=====team end=======-->
-
     <!--=====Testimonial start=======-->
-
     <div class="testimonial9 _relative sp3" style="background-color: #FFF8F6;">
         <div class="container">
             <div class="row">
@@ -597,14 +579,33 @@
                     @endforeach
                 </div>
             </div>
+            <div class="space40"></div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center" data-aos="fade-up" data-aos-duration="900">
+                        <a href="{{ route('frontend.testimonial') }}" class="theme-btn18 font-f-7">View All
+                            Testimonial</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
     <!--=====Testimonial end=======-->
-
     <!--=====blog start=======-->
     <div class="blog-post-all sp3">
         <div class="container">
+               <div class="row">
+                <div class="col-lg-6 m-auto text-center">
+                    <div class="hadding9">
+                        <span class="span font-f-3" data-aos="fade-up"
+                            data-aos-duration="700">{{ $settings['blogs_title'] ?? '' }}</span>
+                        <div class="space16"></div>
+                        <h1 class="font-f-3" data-aos="fade-up" data-aos-duration="900">
+                            {{ $settings['blogs_subtitle'] ?? '' }}</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="space60"></div>
             <div class="row">
                 @foreach ($blogs as $item)
                     <div class="col-lg-4 col-md-6">
@@ -616,7 +617,7 @@
                                 </div>
                                 <div class="hadding2 blog-post-hadding">
                                     <h3 class="weight-600 blog-heading">
-                                        {{ Str::limit($item->title, 50) }}
+                                        {{ Str::limit($item->title, 40) }}
                                     </h3>
                                     <div class="space8"></div>
                                     <p>{{ Str::limit($item->short_description ?? strip_tags($item->description), 120) }}
@@ -639,7 +640,7 @@
                     </div>
                 @endforeach
             </div>
-              <div class="space40"></div>
+            <div class="space40"></div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center" data-aos="fade-up" data-aos-duration="900">
@@ -650,9 +651,7 @@
         </div>
     </div>
     <!--=====blog end=======-->
-
     <!--=====contact start=======-->
-
     <div class="contact1 sp3" style="background-color: #FFFBFB;">
         <div class="container">
             <div class="row align-items-center">
@@ -695,7 +694,6 @@
 
                     </div>
                 </div>
-
                 <div class="col-lg-6">
                     <div class="hadding9 contact1-hadding">
                         <span class="font-f-2 span" data-aos="fade-left"
@@ -704,7 +702,7 @@
                         <h1 class="font-f-3" data-aos="fade-left" data-aos-duration="900">
                             {{ $settings['contactform_description'] ??
                                 'Our dedicated team of
-                                                                                                                                                                                                    experts is ready to assist you with all your visa-related needs.' }}
+                                                                                                                                                                                                                                experts is ready to assist you with all your visa-related needs.' }}
                         </h1>
                         <div class="contact-icon-box" data-aos="fade-left" data-aos-duration="1100">
                             <div class="contact-icon">

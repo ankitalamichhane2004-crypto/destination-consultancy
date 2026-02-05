@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="blog-post-all sp3">
+    <div class="blog-post-all sp3"  style="background-color: #FFF8F6;">
         <div class="container">
             <div class="row">
                 @foreach ($blog as $blog)
@@ -42,7 +42,7 @@
                             </div>
                             <div class="hadding2 blog-post-hadding">
                                 <h3 class="weight-600 blog-heading">
-                                    {{ Str::limit($blog->title, 50) }}
+                                    {{ Str::limit($blog->title, 40) }}
                                 </h3>
                                 <div class="space8"></div>
                                 <p>{{ Str::limit($blog->short_description ?? strip_tags($blog->description), 120) }}</p>

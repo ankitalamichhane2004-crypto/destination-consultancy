@@ -20,6 +20,8 @@
                     <div class="space16"></div>
                     <div class="page-hero-p">
                         <a href="{{ route('frontend.home') }}">Home</a>
+                        <span><i class="fa-solid fa-angle-right"></i></span> 
+                        <a href="{{ route('frontend.abroad') }}">Country</a>
                         <span><i class="fa-solid fa-angle-right"></i></span>
                         <p>{{ $abroadstudiesingle->title ?? 'Page Title' }}</p>
                     </div>
@@ -30,7 +32,7 @@
   </div>
   <!--=====pages hero end=======-->
   <!--=====service details start=======-->
-  <div class="service-details-all sp3">
+  <div class="service-details-all sp3" style="background-color: #FFF8F6;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 m-auto">
@@ -60,7 +62,7 @@
   </div>
   <!--=====service details end=======-->
         <!--=====countries start=======-->
-        <div class="countries sp4">
+        <div class="countries sp4" style="background-color: #FFF8F6;">
           <div class="container">
             <div class="row">
               <div class="col-lg-7 m-auto text-center">
