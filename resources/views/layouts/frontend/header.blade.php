@@ -7,7 +7,7 @@
                       <div class="header-elements _relative">
                           <div class="site-logo home1-site-logo">
                               <a href="{{ route('frontend.home') }}">
-                                  <img src="{{ asset('image/about.png') }}" style="height: 60px" alt="" />
+                                  <img src="{{ asset($settings['site_main_logo']) }}" style="height: 60px" alt="" />
                               </a>
                           </div>
                           <div class="main-menu-ex main-menu-ex9">
