@@ -40,24 +40,24 @@
                             <div class="hero9-img2">
                                 <img src="{{ asset($sliders->image) }}" alt="">
                             </div>
-                            <div class="hero9-shape1">
+                            <!-- <div class="hero9-shape1">
                                 <img src="{{ asset('frontend/assets/img/shapes/hero9-shape1.svg') }}" alt="">
-                            </div>
-                            <div class="hero9-shape2 aniamtion-key-1">
+                            </div> -->
+                            <!-- <div class="hero9-shape2 aniamtion-key-1">
                                 <img src="{{ asset('frontend/assets/img/shapes/hero9-shape2.svg') }}" alt="">
-                            </div>
-                            <div class="hero9-shape3 aniamtion-key-2">
+                            </div> -->
+                            <!-- <div class="hero9-shape3 aniamtion-key-2">
                                 <img src="{{ asset('frontend/assets/img/shapes/hero9-shape3.svg') }}" alt="">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             @endif
         </div>
-        <img class="hero9-shape5 aniamtion-key-2" src="{{ asset('frontend/assets/img/shapes/hero9-shape4.svg') }}"
-            alt="">
-        <img class="hero9-shape4 aniamtion-key-2" src="{{ asset('frontend/assets/img/shapes/hero9-shape5.svg') }}"
-            alt="">
+        <!-- <img class="hero9-shape5 aniamtion-key-2" src="{{ asset('frontend/assets/img/shapes/hero9-shape4.svg') }}"
+            alt=""> -->
+        <!-- <img class="hero9-shape4 aniamtion-key-2" src="{{ asset('frontend/assets/img/shapes/hero9-shape5.svg') }}"
+            alt=""> -->
     </div>
     <!--=====hero area end=======-->
     <!--=====about start=======-->
